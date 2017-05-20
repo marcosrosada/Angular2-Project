@@ -1,6 +1,6 @@
 <section>
 
-  <article>
+  <!-- <article>
     <h4>Class and Style Binding</h4>
 
     <div>
@@ -35,7 +35,26 @@
     <div class="alert" role="alert" [class.alert-danger]="classSelected.value == 'alert-danger'">
       Danger
     </div>
+  </article> -->
 
+    <article class="event-binding">
+        <h3>Event Binding</h3>
 
-  </article>
+        <div class="jumbotron">
+            <input type="text" #fieldInput
+                (keyup)="onKeyUp($event)"
+                (keyup.enter)="doSave($event.target.value)"
+                (blur)="doSave(fieldInput.value)">
+
+            <button class="btn btn-primary" (click)="doSave(currentValue)">Save!</button>
+
+            <p>{{ valueSaved }}</p>
+
+            <span
+                (mouseover)="onMouseOver()"
+                (mouseout)="onMouseOver()"
+                [class.highlight]="isMouseOver" >
+            Pass mouse over</span>
+        </div>
+      </article>
 </section>

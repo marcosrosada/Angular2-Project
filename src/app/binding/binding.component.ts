@@ -7,9 +7,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BindingComponent implements OnInit {
 
-  constructor() { }
+    currentValue: string = '';
+    valueSaved: string = '';
+    isMouseOver: boolean = false;
 
-  ngOnInit() {
-  }
+    constructor() { }
 
+    ngOnInit() {
+    }
+
+    onKeyUp(event: KeyboardEvent){
+        this.currentValue = (<HTMLInputElement>event.target).value;
+        console.log(this.currentValue);
+    }
+
+    doSave(value) {
+      this.valueSaved = value;
+    }
+
+    onMouseOver() {
+        this.isMouseOver = !this.isMouseOver;
+    }
 }
