@@ -6,6 +6,7 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { MySelectorComponent } from './components/my-selector.component';
 import { MySelector2Component } from './my-selector2/my-selector2.component';
+import { CoursesModule } from './courses/courses.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { MySelector2Component } from './my-selector2/my-selector2.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    CoursesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
