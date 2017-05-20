@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { MySelectorComponent } from './components/my-selector.component';
 import { MySelector2Component } from './my-selector2/my-selector2.component';
 import { CoursesModule } from './courses/courses.module';
+import { BindingComponent } from './binding/binding.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MySelectorComponent,
-    MySelector2Component
+    MySelector2Component,
+    BindingComponent
   ],
   imports: [
     BrowserModule,
