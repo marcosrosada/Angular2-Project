@@ -7,13 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BindingComponent implements OnInit {
 
+    urlImagem = 'http://lorempixel.com/400/200/nature/';
     currentValue: string = '';
     valueSaved: string = '';
     isMouseOver: boolean = false;
 
+    name: string = '';
+
     constructor() { }
 
     ngOnInit() {
+    }
+
+    getValor(){
+        return 1;
     }
 
     onKeyUp(event: KeyboardEvent){

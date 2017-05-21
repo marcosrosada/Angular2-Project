@@ -1,43 +1,60 @@
 <section>
 
-  <!-- <article>
-    <h4>Class and Style Binding</h4>
+    <!-- <article>
+        <h3>Interpolation / Interpolação</h3>
+        <p>String renderizada com interpolação: {{ url }}</p>
+        <p>Resultado de 1 + 1 é: {{ 1 + 1 }}</p>
+        <p>Resultado de 1 + 1 não é {{ 1 + 1 + getValor()}}</p>
+        <p>Curso de Angular e gosto do curso: {{ cursoAngular && getCurtirCurso() }}</p>
+    </article> -->
 
-    <div>
-        <select #classSelected (change)="0">
-          <option value="alert-success">Sucesso</option>
-          <option value="alert-info">Info</option>
-          <option value="alert-warning">Alerta</option>
-          <option value="alert-danger">Erro</option>
-        </select>
-    </div>
+    <!-- <article>
+        <h3>Property Binding</h3>
+        <img src="{{ urlImagem }}">
+        <img [src]="urlImagem">
+        <img bind-src="urlImagem">
+    </article> -->
 
-    <div class="alert {{ classSelected.value }}" role="alert">
-      Text color
-    </div>
+    <!-- <article>
+        <h4>Class and Style Binding</h4>
 
-    <div class="alert alert-success" role="alert" [style.display]="classSelected.value == 'alert-success' ? 'block' : 'none'">
-      Style binding
-    </div>
+        <div>
+            <select #classSelected (change)="0">
+              <option value="alert-success">Sucesso</option>
+              <option value="alert-info">Info</option>
+              <option value="alert-warning">Alerta</option>
+              <option value="alert-danger">Erro</option>
+            </select>
+        </div>
 
-    <div class="alert" role="alert" [class.alert-success]="classSelected.value == 'alert-success'">
-      Success
-    </div>
+        <div class="row">
+            <div class="col-md-3 alert" role="alert" [class.alert-success]="classSelected.value == 'alert-success'">
+              Success
+            </div>
 
-    <div class="alert" role="alert" [class.alert-info]="classSelected.value == 'alert-info'">
-      Info
-    </div>
+            <div class="col-md-3 alert" role="alert" [class.alert-info]="classSelected.value == 'alert-info'">
+              Info
+            </div>
 
-    <div class="alert" role="alert" [class.alert-warning]="classSelected.value == 'alert-warning'">
-      Warning
-    </div>
+            <div class="col-md-3 alert" role="alert" [class.alert-warning]="classSelected.value == 'alert-warning'">
+              Warning
+            </div>
 
-    <div class="alert" role="alert" [class.alert-danger]="classSelected.value == 'alert-danger'">
-      Danger
-    </div>
-  </article> -->
+            <div class="col-md-3 alert" role="alert" [class.alert-danger]="classSelected.value == 'alert-danger'">
+              Danger
+            </div>
+        </div>
 
-    <article class="event-binding">
+        <div class="alert {{ classSelected.value }}" role="alert">
+          Text color
+        </div>
+
+        <div class="alert alert-success" role="alert" [style.display]="classSelected.value == 'alert-success' ? 'block' : 'none'">
+          Style binding
+        </div>
+    </article> -->
+
+    <!-- <article class="event-binding">
         <h3>Event Binding</h3>
 
         <div class="jumbotron">
@@ -56,5 +73,39 @@
                 [class.highlight]="isMouseOver" >
             Pass mouse over</span>
         </div>
-      </article>
+    </article> -->
+
+    <article class="two-way-binding">
+        <h3>Two-way data binding</h3>
+
+        <div class="row">
+            <div class="col-md-3">
+                <p>By Value Property Binding</p>
+                <input type="text"
+                    [value]="name"
+                    (input)="name = $event.target.value"/>
+            </div>
+
+            <div class="col-md-3">
+                <p>By ngModel</p>
+                <input type="text"
+                    [ngModel]="name"
+                    (ngModelChange)="name = $event"/>
+            </div>
+
+            <div class="col-md-3">
+                <p>By Banana in the box</p>
+                <input type="text"
+                    [(ngModel)]="name"/>
+            </div>
+
+            <div class="col-md-3">
+                <p>By bindon-ngModel</p>
+                <input type="text"
+                    bindon-ngModel="name"/>
+            </div>
+        </div>
+        <p>Result: {{ name }}</p>
+    </article>
+
 </section>
