@@ -7,11 +7,13 @@ import { AppComponent } from './app.component';
 import { CoursesModule } from './courses/courses.module';
 import { BindingModule } from './binding/binding.module';
 import { LifeCicleComponent } from './life-cicle/life-cicle.component';
+import { DomViewChildComponent } from './dom-view-child/dom-view-child.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LifeCicleComponent
+    LifeCicleComponent,
+    DomViewChildComponent
   ],
   imports: [
     BrowserModule,
