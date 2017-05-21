@@ -16,4 +16,6 @@
 
 <!-- <app-two-way-data-binding></app-two-way-data-binding> -->
 
-<app-input-property [title]="title" [description]="description"></app-input-property>
+<!-- <app-input-property [title]="title" [description]="description"></app-input-property> -->
+
+<app-output-property [count]="countInit" (countChanged)="onCountChanged($event)"></app-output-property>
