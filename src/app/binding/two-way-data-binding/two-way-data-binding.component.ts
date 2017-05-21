@@ -7,11 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TwoWayDataBindingComponent implements OnInit {
 
-  constructor() { }
+    name: string = '';
 
-  ngOnInit() {
-  }
+    constructor() { }
 
-  name: string = '';
+    ngOnInit() {
+    }
 
 }

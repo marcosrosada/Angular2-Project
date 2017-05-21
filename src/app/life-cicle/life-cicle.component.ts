@@ -1,14 +1,24 @@
-import { Component, OnInit, OnChanges, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy, Input } from '@angular/core';
+import { Component,
+         OnInit,
+         OnChanges,
+         DoCheck,
+         AfterContentInit,
+         AfterContentChecked,
+         AfterViewInit,
+         AfterViewChecked,
+         OnDestroy,
+         Input } from '@angular/core';
 
 @Component({
   selector: 'app-life-cicle',
   templateUrl: './life-cicle.component.html',
   styleUrls: ['./life-cicle.component.css']
 })
-export class LifeCicleComponent implements OnInit, OnChanges, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {
+export class LifeCicleComponent implements OnInit, OnChanges, DoCheck,
+         AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {
 
 
-    @Input() startValue : number;
+    @Input() startValue: number;
 
   constructor() {
       this.doLog('constructor');

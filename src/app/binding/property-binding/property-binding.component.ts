@@ -7,11 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PropertyBindingComponent implements OnInit {
 
-  constructor() { }
+    urlImagem: string = 'http://lorempixel.com/400/200/nature/';
 
-  ngOnInit() {
-  }
+    constructor() { }
 
-  urlImagem: string = 'http://lorempixel.com/400/200/nature/';
-
+    ngOnInit() {
+    }
 }

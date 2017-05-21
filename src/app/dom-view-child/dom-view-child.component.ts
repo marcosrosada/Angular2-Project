@@ -7,27 +7,27 @@ import { Component, OnInit, Input, Output, EventEmitter, ViewChild, ElementRef }
 })
 export class DomViewChildComponent implements OnInit {
 
-  constructor() { }
+    @Input() count: number = 0;
+    @Output() countChanged = new EventEmitter();
+    @ViewChild('inputField') viewInput: ElementRef;
 
-  ngOnInit() {
-  }
+    constructor() { }
 
-  @Input() count: number = 0;
-  @Output() countChanged = new EventEmitter();
-  @ViewChild('inputField') viewInput: ElementRef;
+    ngOnInit() {
+    }
 
-  increment() {
-      this.viewInput.nativeElement.value++;
-      this.doEmit();
-  }
+    increment() {
+        this.viewInput.nativeElement.value++;
+        this.doEmit();
+    }
 
-  decrement(){
-      this.viewInput.nativeElement.value--;
-      this.doEmit();
-  }
+    decrement() {
+        this.viewInput.nativeElement.value--;
+        this.doEmit();
+    }
 
-  doEmit() {
-      this.countChanged.emit({ newValue: this.count });
-  }
+    doEmit() {
+        this.countChanged.emit({ newValue: this.count });
+    }
 
 }

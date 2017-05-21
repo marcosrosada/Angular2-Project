@@ -7,26 +7,26 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class OutputPropertyComponent implements OnInit {
 
-  constructor() { }
+    @Input() count: number = 0;
+    @Output() countChanged = new EventEmitter();
 
-  ngOnInit() {
-  }
+    constructor() { }
 
-  @Input() count: number = 0;
-  @Output() countChanged = new EventEmitter();
+    ngOnInit() {
+    }
 
-  increment() {
-      this.count++;
-      this.doEmit();
-  }
+    increment() {
+        this.count++;
+        this.doEmit();
+    }
 
-  decrement(){
-      this.count--;
-      this.doEmit();
-  }
+    decrement() {
+        this.count--;
+        this.doEmit();
+    }
 
-  doEmit() {
-      this.countChanged.emit({ newValue: this.count });
-  }
+    doEmit() {
+        this.countChanged.emit({ newValue: this.count });
+    }
 
 }

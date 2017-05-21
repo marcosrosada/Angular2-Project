@@ -16,7 +16,7 @@ export class EventBindingComponent implements OnInit {
     ngOnInit() {
     }
 
-    onKeyUp(event: KeyboardEvent){
+    onKeyUp(event: KeyboardEvent) {
         this.currentValue = (<HTMLInputElement>event.target).value;
         console.log(this.currentValue);
     }

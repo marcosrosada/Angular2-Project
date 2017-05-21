@@ -7,15 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InterpolationComponent implements OnInit {
 
+    myString: string = 'My String from component';
+
     constructor() { }
 
     ngOnInit() {
     }
 
-    myString: string = "My String from component";
-    
-    getValor(){
+    getValor() {
         return 1;
     }
-
 }
