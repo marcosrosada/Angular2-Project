@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MySelector2Component } from './my-selector2.component';
+import { ClassStyleBindingComponent } from './class-style-binding.component';
 
-describe('MySelector2Component', () => {
-  let component: MySelector2Component;
-  let fixture: ComponentFixture<MySelector2Component>;
+describe('ClassStyleBindingComponent', () => {
+  let component: ClassStyleBindingComponent;
+  let fixture: ComponentFixture<ClassStyleBindingComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MySelector2Component ]
+      declarations: [ ClassStyleBindingComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MySelector2Component);
+    fixture = TestBed.createComponent(ClassStyleBindingComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

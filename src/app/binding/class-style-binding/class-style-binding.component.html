@@ -1,0 +1,54 @@
+<section>
+    <article>
+        <div class="row">
+            <div class="col-md-3">
+                <select class="form-control" #classSelected (change)="0">
+                  <option value="alert-success">Success</option>
+                  <option value="alert-info">Info</option>
+                  <option value="alert-warning">Alerta</option>
+                  <option value="alert-danger">Erro</option>
+                </select>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="alert" role="alert" [class.alert-success]="classSelected.value == 'alert-success'">
+                  Success
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="alert" role="alert" [class.alert-info]="classSelected.value == 'alert-info'">
+                  Info
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="alert" role="alert" [class.alert-warning]="classSelected.value == 'alert-warning'">
+                  Warning
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="alert" role="alert" [class.alert-danger]="classSelected.value == 'alert-danger'">
+                  Danger
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="alert {{ classSelected.value }}" role="alert">
+                  Text color
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="alert alert-success" role="alert" [style.display]="classSelected.value == 'alert-success' ? 'block' : 'none'">
+                  Style binding display control
+                </div>
+            </div>
+        </div>
+    </article>
+</section>
