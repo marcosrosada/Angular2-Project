@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { InterpolationComponent } from './interpolation/interpolation.component';
+import { PropertyBindingComponent } from './property-binding/property-binding.component';
 
 
 @NgModule({
@@ -8,10 +9,12 @@ import { InterpolationComponent } from './interpolation/interpolation.component'
     CommonModule
   ],
   declarations: [
-      InterpolationComponent
+      InterpolationComponent,
+      PropertyBindingComponent
   ],
   exports: [
-      InterpolationComponent
+      InterpolationComponent,
+      PropertyBindingComponent
   ]
 })
 export class BindingModule { }
