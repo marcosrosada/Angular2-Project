@@ -6,19 +6,19 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { MySelector2Component } from './my-selector2/my-selector2.component';
 import { CoursesModule } from './courses/courses.module';
-import { BindingComponent } from './binding/binding.component';
+import { BindingModule } from './binding/binding.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MySelector2Component,
-    BindingComponent
+    MySelector2Component
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    CoursesModule
+    CoursesModule,
+    BindingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
