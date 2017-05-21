@@ -18,4 +18,8 @@
 
 <!-- <app-input-property [title]="title" [description]="description"></app-input-property> -->
 
-<app-output-property [count]="countInit" (countChanged)="onCountChanged($event)"></app-output-property>
+<!-- <app-output-property [count]="countInit" (countChanged)="onCountChanged($event)"></app-output-property> -->
+
+<app-life-cicle [startValue]="startValue" *ngIf="!destroyCicle"></app-life-cicle>
+<button class="btn btn-primary" (click)="increment()">Add</button>
+<button class="btn btn-danger" (click)="doDestroy()">Destroy</button>

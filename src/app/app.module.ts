@@ -6,10 +6,12 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { CoursesModule } from './courses/courses.module';
 import { BindingModule } from './binding/binding.module';
+import { LifeCicleComponent } from './life-cicle/life-cicle.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LifeCicleComponent
   ],
   imports: [
     BrowserModule,
