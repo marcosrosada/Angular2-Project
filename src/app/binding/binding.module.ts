@@ -7,6 +7,7 @@ import { PropertyBindingComponent } from './property-binding/property-binding.co
 import { ClassStyleBindingComponent } from './class-style-binding/class-style-binding.component';
 import { EventBindingComponent } from './event-binding/event-binding.component';
 import { TwoWayDataBindingComponent } from './two-way-data-binding/two-way-data-binding.component';
+import { InputPropertyComponent } from './input-property/input-property.component';
 
 
 @NgModule({
@@ -19,14 +20,16 @@ import { TwoWayDataBindingComponent } from './two-way-data-binding/two-way-data-
       PropertyBindingComponent,
       ClassStyleBindingComponent,
       EventBindingComponent,
-      TwoWayDataBindingComponent
+      TwoWayDataBindingComponent,
+      InputPropertyComponent
   ],
   exports: [
       InterpolationComponent,
       PropertyBindingComponent,
       ClassStyleBindingComponent,
       EventBindingComponent,
-      TwoWayDataBindingComponent
+      TwoWayDataBindingComponent,
+      InputPropertyComponent
   ]
 })
 export class BindingModule { }
