@@ -8,12 +8,14 @@ import { CoursesModule } from './courses/courses.module';
 import { BindingModule } from './binding/binding.module';
 import { LifeCicleComponent } from './life-cicle/life-cicle.component';
 import { DomViewChildComponent } from './dom-view-child/dom-view-child.component';
+import { SwitchComponent } from './switch/switch.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LifeCicleComponent,
-    DomViewChildComponent
+    DomViewChildComponent,
+    SwitchComponent
   ],
   imports: [
     BrowserModule,
