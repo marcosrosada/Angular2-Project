@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class SwitchComponent implements OnInit {
 
     tabSelected: string = 'home';
+    courses: string[] = ["Angular 2", "Java", "Phonegap"];
 
   constructor() { }
 
