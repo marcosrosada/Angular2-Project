@@ -16,5 +16,13 @@
             <p *ngSwitchCase="'lista'">Mode List selected</p>
             <p *ngSwitchDefault>Home</p>
         </div>
+
+        <hr />
+
+        <div class="container">
+            <p *ngIf="tabSelected == 'mapa'">Mode Maps selected</p>
+            <p *ngIf="tabSelected == 'lista'">Mode List selected</p>
+            <p *ngIf="tabSelected == 'home'">Home</p>
+        </div>
     </article>
 </section>
