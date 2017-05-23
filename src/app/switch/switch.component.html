@@ -2,8 +2,19 @@
     <article>
         <h3>ngSwitch, ngSwitchCase and ngSwitchDefault</h3>
 
-        <div>
-            
+
+        <div class="container">
+            <button class="btn btn-default" [class.btn-primary]="tabSelected == 'home'" (click)="tabSelected = 'home'">Home</button>
+            <button class="btn btn-default" [class.btn-primary]="tabSelected == 'mapa'" (click)="tabSelected = 'mapa'">Maps</button>
+            <button class="btn btn-default" [class.btn-primary]="tabSelected == 'lista'" (click)="tabSelected = 'lista'">List</button>
+        </div>
+
+        <hr />
+
+        <div class="container" [ngSwitch]="tabSelected">
+            <p *ngSwitchCase="'mapa'">Mode Maps selected</p>
+            <p *ngSwitchCase="'lista'">Mode List selected</p>
+            <p *ngSwitchDefault>Home</p>
         </div>
     </article>
 </section>
