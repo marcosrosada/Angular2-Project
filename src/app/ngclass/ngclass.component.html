@@ -1,0 +1,14 @@
+<section>
+  <article>
+    <h3>ngClass</h3>
+
+    <button class="btn btn-primary" (click)="doLike()">
+        <i class="fa "
+            [ngClass]="{
+                'fa-thumbs-up': liked,
+                'fa-thumbs-down': !liked
+            }"
+        ></i>
+    </button>
+  </article>
+</section>
