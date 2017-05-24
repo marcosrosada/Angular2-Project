@@ -13,9 +13,9 @@ export class ElvisOperatorComponent implements OnInit {
         //owner: { name: 'Marcos Rosada' }
     };
 
-  constructor() { }
+    constructor() { }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+    }
 
 }
