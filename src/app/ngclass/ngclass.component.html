@@ -11,4 +11,19 @@
         ></i>
     </button>
   </article>
+  <article>
+    <h3>ngStyle</h3>
+
+    <button class="btn btn-primary" (click)="doChangeStyle()"
+          [ngStyle]="{
+            'backgroundColor': (cliked ? '#337ab7' : '#d9534f'),
+            'border-color': (cliked ? '#2e6da4' : '#d43f3a'),
+            'color': (cliked ? '#FFF' : '#333'),
+            'fontWeight': (cliked ? 'bold' : 'normal'),
+            'fontSize': tamanhoFonte + 'px'
+            }"
+          >
+          Click to change the style
+      </button>
+  </article>
 </section>

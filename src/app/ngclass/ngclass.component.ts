@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class NgclassComponent implements OnInit {
 
     liked: boolean = false;
+    cliked: boolean = false;
 
     constructor() { }
 
@@ -16,6 +17,10 @@ export class NgclassComponent implements OnInit {
 
     doLike() {
         this.liked = !this.liked;
+    }
+
+    doChangeStyle() {
+        this.cliked = !this.cliked;
     }
 
 }
