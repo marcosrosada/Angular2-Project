@@ -10,6 +10,7 @@ import { LifeCicleComponent } from './life-cicle/life-cicle.component';
 import { DomViewChildComponent } from './dom-view-child/dom-view-child.component';
 import { SwitchComponent } from './switch/switch.component';
 import { NgclassComponent } from './ngclass/ngclass.component';
+import { ElvisOperatorComponent } from './elvis-operator/elvis-operator.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { NgclassComponent } from './ngclass/ngclass.component';
     LifeCicleComponent,
     DomViewChildComponent,
     SwitchComponent,
-    NgclassComponent
+    NgclassComponent,
+    ElvisOperatorComponent
   ],
   imports: [
     BrowserModule,
