@@ -11,6 +11,7 @@ import { DomViewChildComponent } from './dom-view-child/dom-view-child.component
 import { SwitchComponent } from './switch/switch.component';
 import { NgclassComponent } from './ngclass/ngclass.component';
 import { ElvisOperatorComponent } from './elvis-operator/elvis-operator.component';
+import { ContentComponent } from './content/content.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ElvisOperatorComponent } from './elvis-operator/elvis-operator.componen
     DomViewChildComponent,
     SwitchComponent,
     NgclassComponent,
-    ElvisOperatorComponent
+    ElvisOperatorComponent,
+    ContentComponent
   ],
   imports: [
     BrowserModule,

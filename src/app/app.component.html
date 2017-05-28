@@ -28,4 +28,16 @@
 
 <!-- <app-ngclass></app-ngclass> -->
 
-<app-elvis-operator></app-elvis-operator>
+<!-- <app-elvis-operator></app-elvis-operator> -->
+
+<app-content>
+    Using ngContent right here
+    <app-output-property [count]="countInit" (countChanged)="onCountChanged($event)"></app-output-property>
+
+    <div class="panel-header">
+        Second Header Panel by Selector
+    </div>
+    <div class="panel-content">
+        <app-output-property [count]="countInit" (countChanged)="onCountChanged($event)"></app-output-property>
+    </div>
+</app-content>
