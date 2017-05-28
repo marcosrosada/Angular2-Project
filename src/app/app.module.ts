@@ -12,6 +12,8 @@ import { SwitchComponent } from './switch/switch.component';
 import { NgclassComponent } from './ngclass/ngclass.component';
 import { ElvisOperatorComponent } from './elvis-operator/elvis-operator.component';
 import { ContentComponent } from './content/content.component';
+import { BackgroundColorDirective } from './shared/background-color.directive';
+import { DirectiveBackgroundComponent } from './directive-background/directive-background.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { ContentComponent } from './content/content.component';
     SwitchComponent,
     NgclassComponent,
     ElvisOperatorComponent,
-    ContentComponent
+    ContentComponent,
+    BackgroundColorDirective,
+    DirectiveBackgroundComponent
   ],
   imports: [
     BrowserModule,
