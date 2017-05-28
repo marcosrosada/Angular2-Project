@@ -14,8 +14,8 @@ export class BackgroundHighlightDirective {
         this._elementRef.nativeElement,
         'background-color', '#DFDFDF'
         );*/
-        this.backgroundColor = '#DFDFDF';
         this.padding = '5px';
+        this.backgroundColor = '#DFDFDF';
     }
 
     @HostListener('mouseleave') onMouseLeave(){
@@ -23,8 +23,8 @@ export class BackgroundHighlightDirective {
         this._elementRef.nativeElement,
         'background-color', 'white'
         );*/
-        this.backgroundColor = '#FFF';
         this.padding = '0';
+        this.backgroundColor = '#FFF';
     }
 
     @HostBinding('style.padding') padding: string;
