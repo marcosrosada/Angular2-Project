@@ -3,7 +3,7 @@
         <h3>Directives</h3>
 
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-4">
                 <h3>ElementRef and Renderer</h3>
 
                 <p backgroundColor >
@@ -12,10 +12,19 @@
 
                 <button class="btn btn-primary" backgroundColor>Button using directive but haven't to be gray.</button>
             </div>
-            <div class="col-md-6">
+
+            <div class="col-md-4">
                 <h3>HostListener and HostBinding</h3>
 
                 <p backgroundHighlight >
+                    The background must changed on Mouse Over event.
+                </p>
+            </div>
+
+            <div class="col-md-4">
+                <h3>Using Property Binding</h3>
+
+                <p [highlight]="'#990000'" [defaultColor]="'#F4F4F4'" >
                     The background must changed on Mouse Over event.
                 </p>
             </div>

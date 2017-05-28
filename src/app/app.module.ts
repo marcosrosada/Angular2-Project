@@ -15,6 +15,7 @@ import { ContentComponent } from './content/content.component';
 import { BackgroundColorDirective } from './shared/background-color.directive';
 import { DirectiveBackgroundComponent } from './directive-background/directive-background.component';
 import { BackgroundHighlightDirective } from './shared/background-highlight.directive';
+import { HighlightDirective } from './shared/highlight.directive';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { BackgroundHighlightDirective } from './shared/background-highlight.dire
     ContentComponent,
     BackgroundColorDirective,
     DirectiveBackgroundComponent,
-    BackgroundHighlightDirective
+    BackgroundHighlightDirective,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
