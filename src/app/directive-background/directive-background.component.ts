@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DirectiveBackgroundComponent implements OnInit {
 
-  constructor() { }
+    someCondition: boolean = false;
 
-  ngOnInit() {
-  }
+    constructor() { }
+
+    ngOnInit() {
+    }
+
+    doChangeCondition() {
+        this.someCondition = !this.someCondition;
+    }
 
 }

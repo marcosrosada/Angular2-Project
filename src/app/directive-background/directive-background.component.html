@@ -3,7 +3,7 @@
         <h3>Directives</h3>
 
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <h3>ElementRef and Renderer</h3>
 
                 <p backgroundColor >
@@ -13,7 +13,7 @@
                 <button class="btn btn-primary" backgroundColor>Button using directive but haven't to be gray.</button>
             </div>
 
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <h3>HostListener and HostBinding</h3>
 
                 <p backgroundHighlight >
@@ -21,13 +21,25 @@
                 </p>
             </div>
 
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <h3>Using Property Binding</h3>
 
                 <p [highlight]="'#990000'" [defaultColor]="'#F4F4F4'" >
                     The background must changed on Mouse Over event.
                 </p>
             </div>
+                <div class="col-md-3">
+                    <h3>Directive ngElse</h3>
+
+                    <p *ngIf="someCondition" class="condition-true">
+                        Condidition is true.
+                    </p>
+                    <p *ngElse="someCondition" class="condition-false">
+                        Condidition is false.
+                    </p>
+
+                    <button class="btn btn-primary" (click)="doChangeCondition()">Change condition</button>
+                </div>
         </div>
     </article>
 </section>

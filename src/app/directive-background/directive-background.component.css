@@ -1,0 +1,9 @@
+.condition-true {
+    background: #7fb9f2;
+    padding: 5px;
+}
+
+.condition-false {
+    background: #b27676;
+    padding: 5px;
+}
