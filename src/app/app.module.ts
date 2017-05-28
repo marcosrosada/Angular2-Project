@@ -14,6 +14,7 @@ import { ElvisOperatorComponent } from './elvis-operator/elvis-operator.componen
 import { ContentComponent } from './content/content.component';
 import { BackgroundColorDirective } from './shared/background-color.directive';
 import { DirectiveBackgroundComponent } from './directive-background/directive-background.component';
+import { BackgroundHighlightDirective } from './shared/background-highlight.directive';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { DirectiveBackgroundComponent } from './directive-background/directive-b
     ElvisOperatorComponent,
     ContentComponent,
     BackgroundColorDirective,
-    DirectiveBackgroundComponent
+    DirectiveBackgroundComponent,
+    BackgroundHighlightDirective
   ],
   imports: [
     BrowserModule,
