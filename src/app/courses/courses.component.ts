@@ -14,12 +14,12 @@ export class CoursesComponent implements OnInit {
   courses: string[];
 
   constructor(private courseService: CoursesService) {
-    this.portalName = 'Course Marcos Rosada';
-
-    this.courses = this.courseService.getCourses();
   }
 
   ngOnInit() {
+    this.portalName = 'Course Marcos Rosada';
+
+    this.courses = this.courseService.getCourses();
   }
 
 }
