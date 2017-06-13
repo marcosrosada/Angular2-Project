@@ -17,6 +17,9 @@ import { DirectiveBackgroundComponent } from './directive-background/directive-b
 import { BackgroundHighlightDirective } from './shared/background-highlight.directive';
 import { HighlightDirective } from './shared/highlight.directive';
 import { NgElseDirective } from './shared/ng-else.directive';
+import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
+import { routing } from './app.routing';
 
 @NgModule({
   declarations: [
@@ -31,14 +34,17 @@ import { NgElseDirective } from './shared/ng-else.directive';
     DirectiveBackgroundComponent,
     BackgroundHighlightDirective,
     HighlightDirective,
-    NgElseDirective
+    NgElseDirective,
+    HomeComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     CoursesModule,
-    BindingModule
+    BindingModule,
+    routing
   ],
   providers: [],
   bootstrap: [AppComponent]
