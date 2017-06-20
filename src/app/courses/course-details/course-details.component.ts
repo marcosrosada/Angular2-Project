@@ -11,7 +11,8 @@ export class CourseDetailsComponent implements OnInit {
   id: string;
 
   constructor(private route: ActivatedRoute) { 
-    console.log(route);
+    this.id = this.route.snapshot.params['id'];
+    console.log(this.id);
     
   }
 
