@@ -9,16 +9,12 @@ import { CoursesService } from './courses.service';
 })
 export class CoursesComponent implements OnInit {
 
-  portalName: string;
-
-  courses: string[];
+  courses: any[];
 
   constructor(private courseService: CoursesService) {
   }
 
   ngOnInit() {
-    this.portalName = 'Course Marcos Rosada';
-
     this.courses = this.courseService.getCourses();
   }
 

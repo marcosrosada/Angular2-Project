@@ -3,12 +3,11 @@
         <h3>Services</h3>
         <div class="row">
             <div class="col-md-6">
-                <p>
-                  {{ portalName }}
-                </p>
                 <div class="collection">
-                    <a *ngFor="let course of courses" class="collection-item">
-                        {{ course }}
+                    <a class="collection-item"
+                        *ngFor="let course of courses" 
+                        [routerLink]="['/courses', course.id]">
+                        {{ course.name }}
                     </a>
                 </div>
             </div>
