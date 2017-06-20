@@ -6,11 +6,11 @@
                 <p>
                   {{ portalName }}
                 </p>
-                <ul>
-                  <li *ngFor="let course of courses">
-                    {{ course }}
-                  </li>
-                </ul>
+                <div class="collection">
+                    <a *ngFor="let course of courses" class="collection-item">
+                        {{ course }}
+                    </a>
+                </div>
             </div>
             <div class="col-md-6">
                 <app-course-details></app-course-details>
