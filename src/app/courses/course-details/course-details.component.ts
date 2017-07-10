@@ -28,6 +28,10 @@ export class CourseDetailsComponent implements OnInit {
       this.id = params['id'];
       
       this.courseSelected = this.courseService.getCourse(this.id);
+
+      // if (this.courseSelected == null) {
+      //   this.router.navigate(['/']);
+      // }
     });
   }
 
