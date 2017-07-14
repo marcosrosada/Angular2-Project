@@ -22,6 +22,7 @@ import { HighlightDirective } from './shared/highlight.directive';
 import { NgElseDirective } from './shared/ng-else.directive';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { StudentsModule } from './students/students.module';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { LoginComponent } from './login/login.component';
     HttpModule,
     CoursesModule,
     BindingModule,
+    StudentsModule,
     AppRoutingModule
   ],
   providers: [],
