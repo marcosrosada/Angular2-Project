@@ -16,4 +16,8 @@ export class StudentsService {
     return this.students;
   }
 
+  getStudent(id: number) {
+    return this.students.filter( student => student.id == id )[0];
+  }
+
 }
