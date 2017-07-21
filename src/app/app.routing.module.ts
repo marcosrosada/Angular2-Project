@@ -10,7 +10,8 @@ import { LoginComponent } from './login/login.component';
 const appRoutes: Routes = [
     { path: '', component: HomeComponent },
     { path: 'login', component: LoginComponent },
-    { path: 'courses', loadChildren: 'app/courses/courses.module#CoursesModule'}
+    { path: 'courses', loadChildren: 'app/courses/courses.module#CoursesModule' },
+    { path: 'students', loadChildren: 'app/students/students.module#StudentsModule' }
     // { path: 'courses', component: CoursesComponent },
     // { path: 'courses/:id', component: CourseDetailsComponent }
 ];
