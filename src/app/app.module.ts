@@ -7,7 +7,6 @@ import { AppRoutingModule } from './app.routing.module';
 import { MaterializeModule } from 'angular2-materialize';
 
 import { AppComponent } from './app.component';
-import { CoursesModule } from './courses/courses.module';
 import { BindingModule } from './binding/binding.module';
 import { LifeCicleComponent } from './life-cicle/life-cicle.component';
 import { DomViewChildComponent } from './dom-view-child/dom-view-child.component';
@@ -45,7 +44,6 @@ import { StudentsModule } from './students/students.module';
     BrowserModule,
     FormsModule,
     HttpModule,
-    CoursesModule,
     BindingModule,
     StudentsModule,
     AppRoutingModule
