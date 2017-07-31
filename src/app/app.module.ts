@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app.routing.module';
 
 import { MaterializeModule } from 'angular2-materialize';
 
+import { AuthService } from './login/auth.service';
 import { AppComponent } from './app.component';
 import { BindingModule } from './binding/binding.module';
 import { LifeCicleComponent } from './life-cicle/life-cicle.component';
@@ -46,7 +47,9 @@ import { LoginComponent } from './login/login.component';
     BindingModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    AuthService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
