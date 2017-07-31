@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
+import { AuthService } from './login/auth.service';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   title: string = 'App working!';
   description: string = 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ' +
                         'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown ' +
@@ -15,6 +16,20 @@ export class AppComponent {
 
   startValue: number = 5;
   destroyCicle: boolean = false;
+
+  showHeader: boolean = false;
+
+
+  constructor(private authService: AuthService) { }
+
+  ngOnInit() {
+      this.authService.showHeader.subscribe(
+          show => {
+              console.log(show);
+              this.showHeader = show
+          }
+      );
+  }
 
   increment() {
       this.startValue++;
