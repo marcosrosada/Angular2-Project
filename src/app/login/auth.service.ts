@@ -26,7 +26,7 @@ export class AuthService {
   }
 
   userLogged() {
-    return this.userLogged;
+    return this.userAuthenticated;
   }
 
 }
