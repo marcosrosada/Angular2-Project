@@ -25,4 +25,8 @@ export class AuthService {
     }
   }
 
+  userLogged() {
+    return this.userLogged;
+  }
+
 }
