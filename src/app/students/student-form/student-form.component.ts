@@ -2,6 +2,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs/Rx';
 import { Component, OnInit } from '@angular/core';
 
+import { IFormCanDeactivate } from './../../guards/iform-candeactivate';
 import { StudentsService } from './../students.service';
 
 @Component({
@@ -9,11 +10,11 @@ import { StudentsService } from './../students.service';
   templateUrl: './student-form.component.html',
   styleUrls: ['./student-form.component.css']
 })
-export class StudentFormComponent implements OnInit {
+export class StudentFormComponent implements OnInit, IFormCanDeactivate {
 
   student: any;
   inscription: Subscription;
-  formChanged: boolean = false;
+  private formChanged: boolean = false;
   
   constructor(
       private route: ActivatedRoute,
@@ -37,6 +38,18 @@ export class StudentFormComponent implements OnInit {
 
   onInput() {
     this.formChanged = true;
+  }
+
+  canChangeRouter() {
+    if (this.formChanged) {
+      confirm('Sair sem salvar?');
+    }
+
+    return true;
+  }
+  
+  canDeactivate() {
+    return this.canChangeRouter();
   }
 
 }
