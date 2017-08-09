@@ -24,8 +24,7 @@ const appRoutes: Routes = [
     { 
         path: 'students', 
         loadChildren: 'app/students/students.module#StudentsModule',
-        canActivate: [AuthGuard],
-        canActivateChild: [StudentsGuard]
+        canActivate: [AuthGuard]
      }
     // { path: 'courses', component: CoursesComponent },
     // { path: 'courses/:id', component: CourseDetailsComponent }
