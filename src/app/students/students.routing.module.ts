@@ -1,11 +1,12 @@
-import { StudentFormComponent } from './student-form/student-form.component';
 import { NgModule } from '@angular/core';
 
 import { Routes, RouterModule } from '@angular/router';
 
 import { StudentsGuard } from './../guards/students.guard';
+import { StudentDeactivateGuard } from './../guards/student-deactivate.guard';
 import { StudentsComponent } from './students.component';
 import { StudentDetailComponent } from './student-detail/student-detail.component';
+import { StudentFormComponent } from './student-form/student-form.component';
 
 const studentsRoutes: Routes = [
     { 
@@ -15,7 +16,8 @@ const studentsRoutes: Routes = [
         children: [
             { 
                 path: 'new', 
-                component: StudentFormComponent 
+                component: StudentFormComponent,
+                canDeactivate: [StudentDeactivateGuard]
             },
             { 
                 path: ':id', 
@@ -23,7 +25,8 @@ const studentsRoutes: Routes = [
             },
             { 
                 path: ':id/edit', 
-                component: StudentFormComponent
+                component: StudentFormComponent,
+                canDeactivate: [StudentDeactivateGuard]
             }
         ] }
 ];

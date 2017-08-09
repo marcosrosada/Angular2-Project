@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
+import { StudentDeactivateGuard } from './../guards/student-deactivate.guard';
 import { StudentsService } from './students.service';
 import { StudentsRoutingModule } from './students.routing.module';
 import { StudentsComponent } from './students.component';
@@ -20,7 +21,8 @@ import { StudentDetailComponent } from './student-detail/student-detail.componen
     StudentDetailComponent
   ],
   providers: [
-    StudentsService
+    StudentsService,
+    StudentDeactivateGuard
   ]
 })
 export class StudentsModule { }

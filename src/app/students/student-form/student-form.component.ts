@@ -12,7 +12,8 @@ import { StudentsService } from './../students.service';
 export class StudentFormComponent implements OnInit {
 
   student: any;
-  inscription: Subscription
+  inscription: Subscription;
+  formChanged: boolean = false;
   
   constructor(
       private route: ActivatedRoute,
@@ -32,6 +33,10 @@ export class StudentFormComponent implements OnInit {
 
   ngOnDestroy() {
     this.inscription.unsubscribe();
+  }
+
+  onInput() {
+    this.formChanged = true;
   }
 
 }
