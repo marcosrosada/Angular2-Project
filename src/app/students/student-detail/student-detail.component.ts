@@ -1,5 +1,5 @@
 import { StudentsService } from './../students.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs/Rx';
 import { Component, OnInit } from '@angular/core';
 
@@ -15,6 +15,7 @@ export class StudentDetailComponent implements OnInit {
   
   constructor(
       private route: ActivatedRoute,
+      private router: Router,
       private studentsService: StudentsService
   ) { }
 
@@ -30,5 +31,9 @@ export class StudentDetailComponent implements OnInit {
 
   ngOnDestroy() {
     this.inscription.unsubscribe();
+  }
+
+  edit() {
+    this.router.navigate(['students', this.student.id, 'edit']);
   }
 }

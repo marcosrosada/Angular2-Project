@@ -1,3 +1,23 @@
-<p>
-  student-form works!
-</p>
+<div class="row">
+    <div class="col s12">
+      
+      <div class="row">
+        <div class="input-field col s12">
+          <input disabled id="id" [(ngModel)]="student.id" type="text" class="validate">
+          <label for="id">ID</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="name" [(ngModel)]="student.name" type="text" class="validate">
+          <label for="name">Nome</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="email" [(ngModel)]="student.email" type="email" class="validate">
+          <label for="email">E-mail</label>
+        </div>
+      </div>
+    </div>
+  </div>

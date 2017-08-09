@@ -14,10 +14,10 @@ export class StudentsGuard implements CanActivateChild {
     console.log(route);
     console.log(state);
 
-    if (state.url.includes('students')) {
-      alert('Not allowed');
-      return false;
-    }
+    // if (state.url.includes('students')) {
+    //   alert('Not allowed');
+    //   return false;
+    // }
     return true;
   }
 
