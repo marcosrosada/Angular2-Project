@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { AuthGuard } from './guards/auth.guard';
+import { StudentsGuard } from './guards/students.guard';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 // import { CoursesComponent } from './courses/courses.component';
@@ -23,7 +24,8 @@ const appRoutes: Routes = [
     { 
         path: 'students', 
         loadChildren: 'app/students/students.module#StudentsModule',
-        canActivate: [AuthGuard]
+        canActivate: [AuthGuard],
+        canActivateChild: [StudentsGuard]
      }
     // { path: 'courses', component: CoursesComponent },
     // { path: 'courses/:id', component: CourseDetailsComponent }
